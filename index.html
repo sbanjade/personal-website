@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sachin Banjade | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <a href="#landing" class="logo-link">
+                <h1 class="logo">Sachin Banjade</h1>
+            </a>
+            <nav id="navbar">
+                <ul id="nav-menu">
+                    <!-- Navigation will be populated dynamically based on mode -->
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <div id="mode-switcher" class="mode-switcher" style="display: none;">
+                    <button class="mode-btn active" data-mode="software-dev">
+                        <i class="fas fa-code"></i>
+                    </button>
+                    <button class="mode-btn" data-mode="cybersecurity">
+                        <i class="fas fa-shield-alt"></i>
+                    </button>
+                </div>
+                <button id="theme-toggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                </button>
+                <button id="menu-toggle" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Landing Career Path Section -->
+    <section id="landing" class="landing-section active">
+        <div class="container">
+            <div class="landing-intro">
+                <div class="intro-photo">
+                    <div class="photo-wrapper">
+                        <img src="images/WhatsApp Image 2024-04-24 at 09.18.57_ebefb72c.jpg" alt="Sachin Banjade">
+                    </div>
+                </div>
+                <div class="intro-text">
+                    <h1 class="intro-name">Hi, I'm <span class="highlight-name">Sachin Banjade</span> 👋</h1>
+                    <p class="intro-description">
+                        Motivated Computer Science student at the University of North Texas with a passion for both software development and cybersecurity. 
+                        I build robust applications using Java, JavaScript, and modern web technologies, while also exploring the cybersecurity landscape 
+                        through hands-on labs, security analysis, and threat detection. My dual focus allows me to create secure, efficient solutions 
+                        and understand systems from both a builder's and defender's perspective.
+                    </p>
+                    <div class="intro-highlights">
+                        <div class="highlight-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>UNT Computer Science</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Dallas, TX</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-briefcase"></i>
+                            <span>Open to Opportunities</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="landing-content">
+                <h2 class="landing-headline">How would you like to explore my work?</h2>
+                
+                <div class="career-cards">
+                    <div class="career-card" data-path="software-dev" role="button" tabindex="0">
+                        <div class="card-icon">
+                            <img src="images/Dp1.jpeg" alt="Software Developer" class="career-icon-image">
+                        </div>
+                        <h3 class="card-title">Software Developer</h3>
+                        <p class="card-description">Explore my software engineering projects, development skills, and technical expertise</p>
+                        <a href="documents/resume_software.pdf" download class="resume-download-btn">
+                            <i class="fas fa-file-pdf"></i> Download Resume
+                        </a>
+                        <div class="card-arrow">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+
+                    <div class="career-card" data-path="cybersecurity" role="button" tabindex="0">
+                        <div class="card-icon">
+                            <img src="images/DP2.jpeg" alt="Cybersecurity Analyst" class="career-icon-image">
+                        </div>
+                        <h3 class="card-title">Cybersecurity Analyst</h3>
+                        <p class="card-description">Discover my cybersecurity projects, security labs, and certifications</p>
+                        <a href="documents/Resume_for_security.pdf" download class="resume-download-btn">
+                            <i class="fas fa-file-pdf"></i> Download Resume
+                        </a>
+                        <div class="card-arrow">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mode Indicator -->
+    <div id="mode-indicator" class="mode-indicator" style="display: none;">
+        <div class="container">
+            <div class="indicator-content">
+                <span class="indicator-label">Viewing:</span>
+                <span class="indicator-mode" id="current-mode-text">Software Developer</span>
+                <button class="switch-mode-btn" id="switch-mode-btn">
+                    <i class="fas fa-exchange-alt"></i>
+                    Switch Mode
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- START MAIN CONTENT -->
+    <div id="main-content">
+    
+    <!-- Hero Section -->
+    <section id="about" class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Hello Everyone, <br><span class="highlight">I'm Sachin</span> 👋</h1>
+                    
+                    <!-- Software Developer Intro -->
+                    <div class="software-only">
+                        <p>Motivated Computer Science student with strong Java and object-oriented programming skills, seeking a Java Developer or related internship role. Proficient in backend development, data structures, and building full-stack applications. Eager to contribute to real-world Java projects and grow as a software developer.</p>
+                    </div>
+
+                    <!-- Cybersecurity Analyst Intro -->
+                    <div class="cybersecurity-only">
+                        <p>My background in software development provides a unique foundation for cybersecurity work. Understanding how systems are built allows me to identify vulnerabilities more effectively, analyze attack vectors from a developer's perspective, and implement security controls that align with real-world application architecture. I focus on securing systems, analyzing threats, and understanding real-world attacks through hands-on labs and practical security analysis.</p>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/sachin-banjade-345339248/" target="_blank" rel="noopener noreferrer" class="social-btn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="mailto:banjadesachin2060@gmail.com" class="social-btn">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="https://www.instagram.com/banjadesachin/" target="_blank" rel="noopener noreferrer" class="social-btn">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.facebook.com/sachin.banjade.3" target="_blank" rel="noopener noreferrer" class="social-btn">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://github.com/sbanjade" target="_blank" rel="noopener noreferrer" class="social-btn">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+
+                    <div class="cta-buttons">
+                        <a href="#contact" class="btn primary-btn">Contact Me</a>
+                        <a href="documents/resume_software.pdf" target="_blank" rel="noopener noreferrer" class="btn outline-btn software-only">See My Resume</a>
+                        <a href="documents/Resume_for_security.pdf" target="_blank" rel="noopener noreferrer" class="btn outline-btn cybersecurity-only">See My Resume</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="profile-container">
+                        <div class="image-card">
+                            <img src="images/WhatsApp Image 2024-04-24 at 09.18.57_ebefb72c.jpg" alt="Sachin Banjade">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            
+            <div class="education-cards">
+                <div class="card education-card">
+                    <div class="education-logo">
+                        <img src="images/university-of-north-texas-logo-477F29AACD-seeklogo.com.png" alt="University of North Texas Logo">
+                    </div>
+                    <div class="education-details">
+                        <h3>University of North Texas</h3>
+                        <p class="degree">Bachelor in Computer Science</p>
+                        <p class="period">Expected Graduation: May 2026</p>
+                        <p class="description">College of Science, Technology, Engineering, and Mathematics (STEM)</p>
+                    </div>
+                </div>
+
+                <div class="card education-card">
+                    <div class="education-logo">
+                        <img src="images/dmark-blue.png" alt="Dallas College Logo">
+                    </div>
+                    <div class="education-details">
+                        <h3>Dallas College</h3>
+                        <p class="degree">Associate of Science Degree</p>
+                        <p class="period">Graduated: May 2024</p>
+                    </div>
+                </div>
+
+                <div class="card education-card">
+                    <div class="education-logo">
+                        <img src="images/Youngstown_State_University_Seal.svg.png" alt="Youngstown State University Logo">
+                    </div>
+                    <div class="education-details">
+                        <h3>Youngstown State University</h3>
+                        <p class="degree">Bachelor of Science in Computer Science</p>
+                        <p class="period">Aug 2022 - Dec 2022</p>
+                        <p class="description">College of Science, Technology, Engineering, and Mathematics (STEM)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section alt-bg">
+        <div class="container">
+            <h2 class="section-title">Skills & Expertise</h2>
+            
+            <!-- Software Development Skills -->
+            <div class="software-only">
+                <div class="skills-categories">
+                    <!-- Programming Languages Category -->
+                    <div class="skills-category">
+                        <h3 class="category-title">Programming Languages</h3>
+                        
+                        <div class="skills-slider-container">
+                            <button class="slider-arrow prev-arrow" aria-label="Previous skills">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            
+                            <div class="skills-slider">
+                                <div class="skills-track">
+                                    <div class="skill-card">
+                                        <div class="skill-icon">
+                                            <img src="images/Java-logo.png" alt="Java">
+                                        </div>
+                                        <h4>Java</h4>
+                                    </div>
+                                    
+                                    <div class="skill-card">
+                                        <div class="skill-icon">
+                                            <img src="images/JavaScript-logo.png" alt="JavaScript">
+                                        </div>
+                                        <h4>JavaScript</h4>
+                                    </div>
+                                    
+                                    <div class="skill-card">
+                                        <div class="skill-icon">
+                                            <img src="images/download.jpeg" alt="Python">
+                                        </div>
+                                        <h4>Python</h4>
+                                    </div>
+                                    
+                                    <div class="skill-card">
+                                        <div class="skill-icon">
+                                            <img src="images/C_Logo.png" alt="C">
+                                        </div>
+                                        <h4>C</h4>
+                                    </div>
+                                    
+                                    <div class="skill-card">
+                                        <div class="skill-icon">
+                                            <img src="images/ISO_C++_Logo.svg.png" alt="C++">
+                                        </div>
+                                        <h4>C++</h4>
+                                    </div>
+                                    
+                                    <div class="skill-card">
+                                        <div class="skill-icon">
+                                            <img src="images/html.png" alt="HTML">
+                                        </div>
+                                        <h4>HTML</h4>
+                                    </div>
+                                    
+                                    <div class="skill-card">
+                                        <div class="skill-icon">
+                                            <img src="images/CSS-Logo-2011.png" alt="CSS">
+                                        </div>
+                                        <h4>CSS</h4>
+                                    </div>
+                                    
+                                    <div class="skill-card">
+                                        <div class="skill-icon">
+                                            <img src="images/algorithms.jpg" alt="Algorithms">
+                                        </div>
+                                        <h4>Algorithms</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <button class="slider-arrow next-arrow" aria-label="Next skills">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cybersecurity Skills -->
+            <div class="cybersecurity-only">
+                <h3 class="subsection-title">Core Cybersecurity Competencies</h3>
+                <div class="cybersec-skills-grid">
+                    <div class="card skill-badge-card">
+                        <i class="fas fa-network-wired skill-badge-icon"></i>
+                        <h4>Network Security & Traffic Analysis</h4>
+                    </div>
+                    <div class="card skill-badge-card">
+                        <i class="fas fa-database skill-badge-icon"></i>
+                        <h4>SIEM & Log Analysis</h4>
+                    </div>
+                    <div class="card skill-badge-card">
+                        <i class="fab fa-linux skill-badge-icon"></i>
+                        <h4>Linux Security Fundamentals</h4>
+                    </div>
+                    <div class="card skill-badge-card">
+                        <i class="fas fa-shield-alt skill-badge-icon"></i>
+                        <h4>Incident Response & Threat Analysis</h4>
+                    </div>
+                    <div class="card skill-badge-card">
+                        <i class="fas fa-code skill-badge-icon"></i>
+                        <h4>SQL for Security Analysis</h4>
+                    </div>
+                    <div class="card skill-badge-card">
+                        <i class="fas fa-lock skill-badge-icon"></i>
+                        <h4>Security Fundamentals (CIA Triad, Access Control)</h4>
+                    </div>
+                </div>
+
+                <!-- Certifications -->
+                <h3 class="subsection-title">Certifications & Professional Development</h3>
+                <div class="certifications-container">
+                    <div class="cert-category">
+                        <h4 class="cert-category-title">
+                            <i class="fas fa-check-circle completed-icon"></i> Completed
+                        </h4>
+                        <div class="cert-cards">
+                            <div class="card cert-card completed">
+                                <div class="cert-icon">
+                                    <i class="fas fa-certificate"></i>
+                                </div>
+                                <div class="cert-content">
+                                    <h5>LinkedIn Learning – SQL Certificate</h5>
+                                    <p class="cert-issuer">LinkedIn Learning</p>
+                                    <span class="cert-badge">Completed</span>
+                                </div>
+                            </div>
+                            <div class="card cert-card completed">
+                                <div class="cert-icon">
+                                    <i class="fab fa-google"></i>
+                                </div>
+                                <div class="cert-content">
+                                    <h5>Google Professional Cybersecurity Certificate</h5>
+                                    <p class="cert-issuer">Google via Coursera</p>
+                                    <span class="cert-badge">Completed</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cert-category">
+                        <h4 class="cert-category-title">
+                            <i class="fas fa-bullseye planned-icon"></i> Planned
+                        </h4>
+                        <div class="cert-cards">
+                            <div class="card cert-card planned">
+                                <div class="cert-icon">
+                                    <i class="fas fa-award"></i>
+                                </div>
+                                <div class="cert-content">
+                                    <h5>CompTIA Security+</h5>
+                                    <p class="cert-issuer">CompTIA</p>
+                                    <span class="cert-badge planned-badge">In Progress</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            
+            <div class="projects-grid">
+                <!-- Software Projects -->
+                <div class="card project-card software-only">
+                    <div class="project-image">
+                        <img src="images/inventory.png" alt="Inventory Management System">
+                    </div>
+                    <div class="project-content">
+                        <h3>Inventory Management System</h3>
+                        <p>Developed an Inventory Management System in Java using Swing for the GUI and MySQL for database management, enabling product tracking, stock updates, and report generation.</p>
+                        <a href="https://github.com/sbanjade/Inventory-Management-System" class="project-link" target="_blank" rel="noopener noreferrer">
+                            View Project <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="card project-card hybrid">
+                    <div class="project-image">
+                        <img src="images/Front-End-and-Back-End-Payment-Processing-1200x900.png" alt="Credit Card Transaction Backend System">
+                    </div>
+                    <div class="project-content">
+                        <h3>Credit Card Transaction Backend System</h3>
+                        <p>Utilized Java programming language to design and implement a backend system for credit card transactions. Incorporated concepts of data security, encryption, and database management to ensure secure transaction processing.</p>
+                        <a href="https://github.com/sbanjade/backend-system-for-credit-card-transactions" class="project-link" target="_blank" rel="noopener noreferrer">
+                            View Project <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="card project-card software-only">
+                    <div class="project-image">
+                        <img src="images/habit tracking.png" alt="Habit Tracking website">
+                    </div>
+                    <div class="project-content">
+                        <h3>Habit Tracker with Gamified Experience</h3>
+                        <p>Developed a full-stack Habit Tracker web app featuring goal setting, streak tracking, dashboard analytics, and visual progress charts, with user authentication and data persistence using MongoDB and localStorage.</p>
+                        <a href="https://github.com/sbanjade/Habit-Tracker" class="project-link" target="_blank" rel="noopener noreferrer">
+                            View Project <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="card project-card software-only">
+                    <div class="project-image">
+                        <img src="images/weather.png" alt="Weather Monitoring System">
+                    </div>
+                    <div class="project-content">
+                        <h3>Weather Monitoring System</h3>
+                        <p>Designed a Weather Monitoring System in C++, which collects and analyzes weather data, provides real-time updates, and generates reports on temperature, humidity, and precipitation trends.</p>
+                        <a href="https://github.com/sbanjade/Weather-Monitoring-System" class="project-link" target="_blank" rel="noopener noreferrer">
+                            View Project <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="card project-card software-only">
+                    <div class="project-image">
+                        <img src="images/simcity.png" alt="SimCity-Style City Growth Simulation — C++">
+                    </div>
+                    <div class="project-content">
+                        <h3>SimCity-Style City Growth Simulation — C++</h3>
+                        <p>Developed a SimCity-style city growth simulation in C++ that models residential, commercial, and industrial zones with population growth, adjacency effects, and pollution diffusion. Implemented modular classes to manage zone behaviors and simulate step-by-step development with real-time layout and pollution visualization..</p>
+                        <a href="https://github.com/sbanjade/Simcity/tree/main/Simcity" class="project-link" target="_blank" rel="noopener noreferrer">
+                            View Project <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="card project-card software-only">
+                    <div class="project-image">
+                        <img src="images/almuni.png" alt="Alumni Networking & Insights Platform">
+                    </div>
+                    <div class="project-content">
+                        <h3>Alumni Networking & Insights Platform</h3>
+                        <p>Developed a full-stack web application for visualizing alumni career data and improving university engagement. Built core features including database integration, PDF-based data extraction, LinkedIn scraping logic, and an interactive heatmap that displays alumni locations in real time for easier insights and networking.</p>
+                        <a href="https://github.com/sangambartaula/alumni-networking-tool" class="project-link" target="_blank" rel="noopener noreferrer">
+                            View Project <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Cybersecurity Projects -->
+                <div class="card project-card cybersecurity-only">
+                    <div class="project-image">
+                        <img src="images/WireShark.png" alt="Wireshark">
+                        <div class="project-icon-placeholder"><i class="fas fa-network-wired"></i></div>
+                    </div>
+                    <div class="project-content">
+                        <h3>HTTP vs HTTPS Traffic Analysis</h3>
+                        <p>Captured and analyzed network traffic using Wireshark to compare plaintext HTTP and encrypted HTTPS communications, demonstrating real-time security risks and credential exposure.</p>
+                        <a href="https://github.com/sbanjade/Web-Application-Security-Lab-HTTP-vs-HTTPS-Traffic-Analysis" class="project-link" target="_blank" rel="noopener noreferrer">
+                            View Project <i class="fas fa-external-link-alt"></i>
+                        </a>
+                        <div class="project-tags">
+            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card project-card cybersecurity-only">
+                    <div class="project-image">
+                        <img src="images/wazuh.png" alt="Wazuh">
+                         <div class="project-icon-placeholder"><i class="fas fa-shield-alt"></i></div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Wazuh SIEM Home Lab</h3>
+                        <p>Deployed a Wazuh SIEM environment to collect and analyze security logs from multiple endpoints, simulating enterprise-level security monitoring and threat detection.</p>
+                        <div class="project-tags">
+                            <span class="tag">Wazuh</span>
+                            <span class="tag">SIEM</span>
+                            <span class="tag">Elasticsearch</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card project-card cybersecurity-only">
+                    <div class="project-image">
+                        <img src="images/linux.png" alt="linux">
+                         <div class="project-icon-placeholder"><i class="fab fa-linux"></i></div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Linux Security & Access Control</h3>
+                        <p>Configured user permissions, group policies, and file access controls (ACLs) to implement least privilege principles and harden a Linux environment against unauthorized access.</p>
+                        <a href="https://github.com/sbanjade/linux-authentication-access-control-lab" class="project-link" target="_blank" rel="noopener noreferrer">
+                            View Project <i class="fas fa-external-link-alt"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                <div class="card project-card cybersecurity-only">
+                    <div class="project-image">
+                        <img src="images/unix.png" alt="linux">
+                         <div class="project-icon-placeholder"><i class="fas fa-exclamation-triangle"></i></div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Unix System Call Exploration & Performance Analysis</h3>
+                        <p>Explored low-level Linux system calls to understand process control, memory management, and system performance. Implemented and analyzed fork(), exec(), ptrace(), and sbrk(), inspected runtime file descriptors, and benchmarked I/O performance to measure system call overhead</p>
+                        <a href="htthttps://github.com/sbanjade/unix-system-calls-analysis" class="project-link" target="_blank" rel="noopener noreferrer">
+                            View Project <i class="fas fa-external-link-alt"></i>
+                        </a>
+    
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section alt-bg">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            
+            <div class="experience-grid">
+                <div class="card experience-card">
+                    <div class="experience-header ysu">
+                        <h3>Youngstown State University</h3>
+                    </div>
+                    <div class="experience-content">
+                        <div class="experience-logo">
+                            <img src="images/Youngstown_State_University_Seal.svg.png" alt="Youngstown State University Logo">
+                        </div>
+                        <div class="experience-details">
+                            <h4>Student Assistant</h4>
+                            <p class="period">August 2022 - December 2022</p>
+                            <ul class="experience-list">
+                                <li>Supported students with autism by assisting with academic challenges, social interactions, and coursework, ensuring individualized learning strategies were met.</li>
+                                <li>Maintained accurate records by tracking daily progress, documenting student performance, and collaborating with faculty for tailored educational support.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card experience-card">
+                    <div class="experience-header tech-spot">
+                        <h3>Technology Spot</h3>
+                    </div>
+                    <div class="experience-content">
+                        <div class="experience-logo">
+                            <img src="images/technology_spot_logo.jpeg" alt="Technology Spot Logo">
+                        </div>
+                        <div class="experience-details">
+                            <h4>SEO Assistant</h4>
+                            <p class="period">June 2020 - May 2022</p>
+                            <ul class="experience-list">
+                                <li>Conducted keyword research, optimized website content, and developed SEO strategies to improve organic traffic and search engine rankings.</li>
+                                <li>Monitored website performance with tools like Google Analytics, collaborating with content creators to implement SEO best practices across various platforms.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    </div><!-- End main-content -->
+
+    <!-- SHARED CONTACT SECTION -->
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Reach Out to Me!</h2>
+            <p class="section-subtitle">You can reach out to me on various social media platforms, and I promise to respond within a day.</p>
+            
+            <div class="contact-grid">
+                <div class="card contact-info-card">
+                    <div class="contact-info">
+                        <h3>Contact Information</h3>
+                        <p class="role">Computer Science Student</p>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Dallas, TX</p>
+                        <p class="availability">Looking for opportunities: Yes</p>
+                        
+                        <div class="contact-social-links">
+                            <a href="https://www.linkedin.com/in/sachin-banjade-345339248/" target="_blank" rel="noopener noreferrer" class="social-btn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="mailto:SachinBanjade@my.unt.edu" class="social-btn">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                            <a href="https://www.instagram.com/banjadesachin/" target="_blank" rel="noopener noreferrer" class="social-btn">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://www.facebook.com/sachin.banjade.3" target="_blank" rel="noopener noreferrer" class="social-btn">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </div>
+                        
+                        <div class="profile-picture">
+                            <img src="images/WhatsApp Image 2024-04-24 at 09.18.57_ebefb72c.jpg" alt="Sachin Banjade">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card contact-form-card">
+                    <h3>Send a Message</h3>
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn primary-btn submit-btn">Send Message</button>
+                    </form>
+                    <div id="form-success" class="form-success">
+                        Thank you for your message! I'll get back to you soon.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Sachin Banjade</h3>
+                    <p> Euless, TX 76039</p>
+                </div>
+                <div class="footer-links">
+                    <p>
+                        Connect with me on 
+                        <a href="https://www.linkedin.com/in/sachin-banjade-345339248/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    </p>
+                    <p class="copyright">&copy; <span id="current-year"></span> Sachin Banjade. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+<!-- Add this before your script.js -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script>
+  (function() {
+    emailjs.init("iJZNw5y-jxGWx2jz1"); // Your EmailJS public key
+  })();
+</script>
+<script src="script.js"></script>
+    
+</body>
+</html>
